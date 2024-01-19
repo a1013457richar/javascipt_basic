@@ -68,6 +68,89 @@ let sorted1 = copySorted(arr3);
 console.log(arr3)
 console.log(sorted1)
 
+//task6
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+
+// let users = [ john, pete, mary ];
+// let usersMapped = users.map(user=>({
+// fullname:`${user.name}${user.surname}`,
+// id:`${user.id}`
+// }))
+// console.log(usersMapped[0].id)
+
+//task7
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let arr5 = [ pete, john, mary ];
+
+function sortByAge(arr){
+
+    return arr.sort((a,b)=>(a.age)-b.age)
+}
+
+// console.log(sortByAge(arr5))
+
+//task7
+
+// function shuffle(arr){
+//     arr.sort(()=>Math.random()-0.5)
+// }
+// let arr7= [1, 2, 3];
+// let shu=shuffle(arr7)
+// console.log(shu)
+
+function shuffle(array){
+    for(let i=array.length-1;i>0;i--){
+        let j=Math.floor(Math.random()*(i+1));
+        [array[i],array[j]]=[array[j],array[i]]
+    }
+    
+}
+
+let count = {
+    '123': 0,
+    '132': 0,
+    '213': 0,
+    '231': 0,
+    '321': 0,
+    '312': 0
+  };
+  
+  for (let i = 0; i < 1000000; i++) {
+    let array = [1, 2, 3];
+    shuffle(array);
+    count[array.join('')]++;
+  }
+  
+  // show counts of all possible permutations
+  for (let key in count) {
+    console.log(`${key}: ${count[key]}`);
+  }
+
+//task8
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr9 = [ john, pete, mary ];
+
+function getAverageAge(users){
+    return users.reduce((pre,users)=>pre+users.age,0)
+}
+
+console.log(getAverageAge(arr9))
+//還剩下最後兩個
+https://javascript.info/array-methods
+
+
+
+
+
+
 
 
 
