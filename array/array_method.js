@@ -35,17 +35,45 @@ let arr1 = [5, 3, 8, 1];
 
 
 function filterRangeInPlace(arr,a,b){
-for (let i=0;i<arr.length,i++){
+    for (let i=0;i<arr.length;i++){
     //先取值
-    let var=arr[i];
-    if(var<a||var>b){
-        arr.splice(i,1)
-        i--
+    let val=arr[i];
+    if(val<a||val>b){
+        arr.splice(i,1);
+        i--;
     }
     
 }
 }
 
-filterRangeInPlace(arr, 1, 4); 
+filterRangeInPlace(arr1, 1, 4); 
+console.log(arr1)
+
+
+//task4
+
+let arr2 = [5, 2, 1, -10, 8];
+// ... your code to sort it in decreasing order
+arr2.sort((a,b)=>b-a)
+console.log(arr2)
+
+//task5
+
+function copySorted(arr1){
+    return [...arr1].sort()
+}
+let arr3 = ["HTML", "JavaScript", "CSS"];
+
+let sorted1 = copySorted(arr3);
+console.log(arr3)
+console.log(sorted1)
+
+
+
+
+
+
+
+
 
 
