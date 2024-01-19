@@ -18,15 +18,27 @@ console.log(add(1)(2))
 // task 2
 let phrase = "Hello";
 
-if (true) {
-  let user = "John";
+// if (true) {
+//   let user = "John";
 
-  function sayHi() {
-    alert(`${phrase}, ${user}`);
+//   function sayHi() {
+//     alert(`${phrase}, ${user}`);
+//   }
+// }
+
+// sayHi()
+
+//TASK3
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+
+
+
+function inBetween(a,b){
+  return function arr(x){
+    console.log(x)
+    return x>a&&x<b
   }
 }
 
-sayHi()
-
-
-
+console.log(arr.filter(inBetween(3,6)))
