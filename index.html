@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Functional-Light JavaScript, Ch11: Stock Ticker</title>
+<link rel="stylesheet" href="stock-ticker.css">
+</head>
+<body>
+<h1>Functional-Light JavaScript, Ch11: Stock Ticker</h1>
+
+<ul id="stock-ticker"></ul>
+
+<!-- faking a server sending up stock updates -->
+<script src="mock-server.js"></script>
+<!-- **************************************** -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script>
+<script src="fp-helpers.js"></script>
+<script src="stock-ticker-events.js"></script>
+<script src="stock-ticker.js"></script>
+<ul id="stock-ticker">
+    <li class="stock" data-stock-id="AAPL">
+        <span class="stock-name">AAPL</span>
+        <span class="stock-price">$121.95</span>
+        <span class="stock-change">+0.01</span>
+    </li>
+    <li class="stock" data-stock-id="MSFT">
+        <span class="stock-name">MSFT</span>
+        <span class="stock-price">$65.78</span>
+        <span class="stock-change">+1.51</span>
+    </li>
+    <li class="stock" data-stock-id="GOOG">
+        <span class="stock-name">GOOG</span>
+        <span class="stock-price">$821.31</span>
+        <span class="stock-change">-8.84</span>
+    </li>
+</ul>
+</body>
+</html>
